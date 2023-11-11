@@ -4,7 +4,9 @@ public class Task {
     private int id;
     private String title;
     private String description;
+    public Task(){
 
+    }
     public Task(int id, String title, String description) {
         this.id = id;
         this.title = title;
