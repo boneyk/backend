@@ -8,5 +8,12 @@
 <h1>Задача:</h1>
 <p th:text = "${issue.getTitle()}">Value</p>
 <p th:text = "${issue.getDescription()}">Value</p>
+
+<hr/>
+<a th:href = "@{/task/{id}/edit(id = ${issue.getId()})}">Edit</a>
+<br/>
+<form th:method = "DELETE" th:action = "@{/task/{id}(id = ${issue.getId()})}">
+  <input type = "submit" value = "Delete"/>
+</form>
 </body>
 </html>

@@ -39,4 +39,8 @@ public class TaskDAO {
         taskToBeUpdated.setDescription(updatedTask.getDescription());
     }
 
+    public static void delete(int id){
+        tasks.removeIf(t -> t.getId() == id);
+    }
+
 }
