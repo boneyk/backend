@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Все задачи</title>
+</head>
+<body>
+<h1>Все задачи:</h1>
+
+<div th:each = "issue : ${task}">
+  <a th:href = "@{/task/{id}(id=${issue.getId()})}" th:text = "${issue.getTitle()}">todo</a>
+</div>
+</body>
+</html>
