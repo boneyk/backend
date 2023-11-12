@@ -32,8 +32,7 @@ public class TaskDAO {
         tasks.add(task);
     }
     public static void update(int id, Task updatedTask){
-        Task taskToBeUpdated;
-        taskToBeUpdated = show(id);
+        Task taskToBeUpdated = show(id);
 
         taskToBeUpdated.setTitle(updatedTask.getTitle());
         taskToBeUpdated.setDescription(updatedTask.getDescription());

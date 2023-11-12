@@ -43,14 +43,9 @@ public class TaskController{
         model.addAttribute("task",taskDAO.show(id));
         return "task/edit";
     }
-    @PatchMapping("/{id}")
+    @PostMapping("/{id}")
     public String update(@ModelAttribute("issue") Task issue, @PathVariable("id") int id){
         taskDAO.update(id,issue);
-        return "redirect:/task";
-    }
-    @DeleteMapping("/{id}")
-    public String delete(@PathVariable("id") int id){
-        taskDAO.delete(id);
         return "redirect:/task";
     }
 }
